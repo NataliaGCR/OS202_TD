@@ -292,6 +292,7 @@ if __name__ == "__main__":
             # Initialiser la liste des directions
             last_positions = []
             # Initialiser la liste des dernières positions
+            food_counter = 0
 
             for source_rank in range(1, size):
                 # Pour chaque processus
