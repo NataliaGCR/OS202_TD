@@ -188,7 +188,7 @@ if __name__ == "__main__":
     # Obtenir le rang du processus actuel
     size = comm.Get_size()
     # Obtenir le nombre total de processus
-    
+
     pg.init()
     # Initialiser pygame
     size_laby = 25, 25
@@ -248,10 +248,12 @@ if __name__ == "__main__":
     if rank == size-1:
         # Si le processus actuel est le dernier
         ants_l = Colony(nb_ants_l+nb_remainder, pos_nest, max_life)
+        pg.display.quit()
         # Initialiser la colonie de fourmis
     elif rank > 0:
         # Si le processus actuel n'est pas le premier
         ants_l = Colony(nb_ants_l, pos_nest, max_life)
+        pg.display.quit()
         # Initialiser la colonie de fourmis
 
     if rank > 0:

@@ -274,6 +274,7 @@ if __name__ == "__main__":
 
     if rank == 1:
         # Code de gestion des fourmis et des phéromones
+        pg.display.quit()
         while True:
             food_counter = ants.advance(a_maze, pos_food, pos_nest, pherom, food_counter)
             # Évolution des fourmis
